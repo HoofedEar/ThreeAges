@@ -11,7 +11,7 @@ public partial class Tree : StaticBody2D
 	public override void _Ready()
 	{
 		// Randomize sprite when spawning
-		Node2DHelpers.RandomizeTexture(this, "res://textures/flora/tree01.png",6);
+		Node2DHelpers.RandomizeTexture(this, "res://textures/flora/trees/tree01.png",6);
 
 		// Handle making the sprite more transparent when the Player is behind them
 		_collisionBody = (Area2D) GetNode("Area2D");
