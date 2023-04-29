@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dhw5dpjtuw77o"]
 
 [ext_resource type="Script" path="res://Tree.cs" id="1_tdfpd"]
-[ext_resource type="Texture2D" uid="uid://be4irrtjjcx3d" path="res://textures/flora/tree01.png" id="1_w34pu"]
+[ext_resource type="Texture2D" uid="uid://be4irrtjjcx3d" path="res://textures/flora/trees/tree01.png" id="1_w34pu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iucpc"]
 radius = 6.92308

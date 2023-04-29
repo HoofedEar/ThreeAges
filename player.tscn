@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://do0ki1luavjxr"]
+[gd_scene load_steps=5 format=3 uid="uid://do0ki1luavjxr"]
 
 [ext_resource type="Script" path="res://Player.cs" id="1_xccx3"]
 [ext_resource type="Texture2D" uid="uid://dwelye6wg6svf" path="res://textures/mobs/full.png" id="2_lgyqs"]
+[ext_resource type="Script" path="res://FPSCounter.gd" id="3_kf1kn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sa0jq"]
 
@@ -17,3 +18,10 @@ position = Vector2(-1, 1)
 shape = SubResource("CapsuleShape2D_sa0jq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="FPSCounter" type="Label" parent="Camera2D"]
+offset_left = 493.0
+offset_top = -320.0
+offset_right = 533.0
+offset_bottom = -297.0
+script = ExtResource("3_kf1kn")
