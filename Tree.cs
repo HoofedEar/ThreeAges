@@ -1,5 +1,3 @@
-using Godot;
-
 namespace ThreeAges;
 
 public partial class Tree : StaticBody2D
