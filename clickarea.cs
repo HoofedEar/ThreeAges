@@ -20,16 +20,17 @@ public partial class clickarea : Area2D
         _time += delta;
         if (Math.Abs((float) _time - 0.1f) < 0.001)
         {
-            ProduceDropdown();
+            HandleClick();
             QueueFree();
         }
 
         base._PhysicsProcess(delta);
     }
 
-    private void ProduceDropdown()
+    private void HandleClick()
     {
-        // Maybe this should just interact with the closest object?
+        // Maybe this should just check for CollisionAreas, instead of all areas
+        // Bodies are fine, it can be useful for animals later on
         var list = GetOverlappingBodies();
         var other = GetOverlappingAreas();
         List<Node2D> nodesClicked = new();

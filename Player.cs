@@ -24,6 +24,12 @@ public partial class Player : CharacterBody2D
 		if (@event.IsActionPressed("left_click"))
 		{
 			// TODO attempt to pick up an item
+			var gmp = GetGlobalMousePosition();
+			var area = (Area2D) _clickArea.Instantiate();
+
+			GetParent().AddChild(area);
+			area.MoveToFront();
+			area.Position = gmp;
 		}
 		if (@event.IsActionPressed("right_click"))
 		{

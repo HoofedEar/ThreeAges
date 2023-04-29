@@ -9,6 +9,21 @@ public partial class Global : Node2D
 	public override void _Ready()
 	{
 		_tree = GD.Load<PackedScene>("res://tree.tscn");
+		for (var x = 0; x < 500; x++)
+		{
+			var node = (StaticBody2D) _tree.Instantiate();
+
+			var spawnX = GD.RandRange(-1000, 1000);
+			var spawnY = GD.RandRange(-1000, 1000);
+
+			AddChild(node);
+
+			node.Position = new Vector2
+			{
+				X = spawnX,
+				Y = spawnY
+			};
+		}
 	}
 
 	public override void _Input(InputEvent @event)
