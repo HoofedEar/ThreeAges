@@ -28,7 +28,7 @@ public partial class ClickArea : Area2D
         // Bodies are fine, it can be useful for animals later on
         var list = GetOverlappingBodies();
         var other = GetOverlappingAreas();
-        List<Node2D> nodesClicked = new();
+        var nodesClicked = new List<Node2D>();
         var player = (Player) GetParent().GetNode("Player");
 
         foreach (var node in list)
