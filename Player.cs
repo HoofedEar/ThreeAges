@@ -6,8 +6,6 @@ public partial class Player : CharacterBody2D
 {
 	[Export]
 	public int Speed { get; set; } = 100;
-
-	public Vector2 MoveTarget;
 	private PackedScene _clickArea;
 
 	public override void _Ready()
@@ -15,13 +13,18 @@ public partial class Player : CharacterBody2D
 		_clickArea = GD.Load<PackedScene>("res://clickarea.tscn");
 	}
 
+	private void GetInput()
+	{
+		var inputDirection = Input.GetVector("left", "right", "up", "down");
+		Velocity = inputDirection * Speed;
+	}
+
 	public override void _Input(InputEvent @event)
 	{
 		if (@event.IsActionPressed("left_click"))
 		{
-			MoveTarget = GetGlobalMousePosition();
+			// TODO attempt to pick up an item
 		}
-		
 		if (@event.IsActionPressed("right_click"))
 		{
 			var gmp = GetGlobalMousePosition();
@@ -35,11 +38,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Velocity = Position.DirectionTo(MoveTarget) * Speed;
-
-		if (Position.DistanceTo(MoveTarget) > 10)
-		{
-			MoveAndSlide();
-		}
+		GetInput();
+		MoveAndSlide();
 	}
 }
