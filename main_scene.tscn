@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0kny821npf6i"]
+
+[ext_resource type="Script" path="res://Global.cs" id="1_aeg0h"]
+[ext_resource type="PackedScene" uid="uid://dhw5dpjtuw77o" path="res://tree.tscn" id="2_i7gy3"]
+[ext_resource type="PackedScene" uid="uid://do0ki1luavjxr" path="res://player.tscn" id="3_vsx2i"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_aeg0h")
+
+[node name="Tree" parent="." instance=ExtResource("2_i7gy3")]
+position = Vector2(235, 268)
+
+[node name="Player" parent="." instance=ExtResource("3_vsx2i")]
+position = Vector2(554, 166)
