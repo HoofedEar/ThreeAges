@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Godot;
-
 namespace ThreeAges;
 
 public partial class ClickArea : Area2D

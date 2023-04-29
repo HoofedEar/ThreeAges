@@ -1,5 +1,3 @@
-using Godot;
-
 namespace ThreeAges;
 
 public static class Node2DHelpers
