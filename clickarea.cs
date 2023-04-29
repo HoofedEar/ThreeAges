@@ -5,7 +5,7 @@ using Godot;
 
 namespace ThreeAges;
 
-public partial class clickarea : Area2D
+public partial class ClickArea : Area2D
 {
     private double _time;
 
